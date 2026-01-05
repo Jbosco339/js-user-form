@@ -1,0 +1,41 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style-type: none;
+}
+#sec1{
+    width: 100%;
+    background-color: white;
+}
+#div1{
+    width: 40%;
+    margin: auto;
+    background-color: rgb(235, 191, 137);
+    padding: 10px;
+    border-radius: 5px;
+}
+button{
+    width: 90%;
+    color: white;
+    background-color: black;
+    padding: 3px;
+    border-radius: 3px;
+}
+input{
+    width: 90%;
+    border-radius: 3px;
+
+}
+h1{
+    text-align: center;
+    padding-bottom: 30px;
+}
+label{
+    font-weight: 800;
+}
+.items{
+    background-color: bisque;
+    margin: 2px;
+    font-weight: 700;
+}
