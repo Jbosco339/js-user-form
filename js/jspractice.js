@@ -1,40 +1,24 @@
-console.log('we are so back');
- age = 39;
- namez = 'solomon'
- console.log(`my name is ${namez} and i am ${age}`)
- console.log(namez.toUpperCase());
- let foods = ['rice', 'beans', 'yam', 'tomato'];
- console.log(foods[2]);
- foods.push('apple')
- console.log(foods);
+const myForm = document.querySelector('#my_form');
+const nameInpu = document.querySelector('#name');
+const emailInput = document.querySelector('#email');
+const message = document.querySelector('.msg');
+const userlist = document.querySelector('#users');
 
- const person = {
-    age: '24',
-    height: '6.7',
-    drink: 'cooke',
-    address: {
-        street: 'wealth avenue',
-        city: 'lagos',
-        country: 'Nigeria'
-    }
- }
- console.log(person);
-let x = '7';
-if (x===7){
-    console.log('x is equal to 7');
-}else{
-    console.log('x is not equal to seven')
-}
-
-const addNumber = (numb1, numb2)=>{
-   return numb1 + numb2;
-}
-console.log(addNumber(5,3));
-
-// selectors begins here
-const btn = document.querySelector('button');
-btn.addEventListener('click',(e)=>{
+myForm.addEventListener('submit', onSubmit);
+function onSubmit(e){
     e.preventDefault();
-    document.querySelector('#my_form').style .background = "lightblue";
-    document.querySelector('#div1').style.background='gray'
-})
+    // emailInput.preventDefault();
+    if(nameInpu.value === '' || emailInput.value === ''){
+        message.classList.add('.eror');
+        message.innerHTML = "please enter all fields";
+        setTimeout(()=> message.remove(), 3000);
+    } else{
+        const li = document.createElement('li');
+        li.appendChild(document.createTextNode(`${nameInpu.value} : ${emailInput.value}`));
+        userlist.appendChild(li);
+
+        // clear fields
+        nameInpu.value ='';
+        emailInput.value ='';
+    }
+}

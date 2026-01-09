@@ -7,23 +7,26 @@
     <title>javascript mastery</title>
 </head>
 <body>
-    <section id="sec1">
+    <section id="container">
         <h1>JS Form Practice</h1>
         <div id="div1">
-            
             <div id="div2">
                 <form action="" id="my_form">
                     <h3>Add User</h3>
-                    <label for="">Name:</label><br>
-                    <input type="text"><br><br>
-                    <label for="">Email:</label><br>
-                    <input type="email"><br><br>
-                    <button>Submit</button><br><br>
+                    <div class="msg"></div>
+
+                    <label for="name">Name:</label><br>
+                    <input type="text" id="name"><br><br>
+                    <label for="email">Email:</label><br>
+                    <input type="email" id="email"><br><br>
+                    <input class="btn" type="submit" value="submit"><br><br>
                 </form>
-                <ul id="ulitem">
-                    <li class="items">Output 1</li>
-                    <li class="items">Output 2</li>
-                    <li class="items">Output 3</li>
+                <p id="ptag">The outputs appear here</p>
+                <ul id="users"></ul>
+                <ul class="items">
+                    <!-- <li class="item">Outputs appear here</li> -->
+                    <!-- <li class="item">Output 2</li>
+                    <li class="item">Output 3</li> -->
                 </ul>
             </div>
         </div>
